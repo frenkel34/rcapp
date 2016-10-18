@@ -70,7 +70,7 @@ function getToken(){
 		};
 	
 		log('get the token');
-		authClient.token.getWithRedirect(options);
+		authClient.token.getWithPopup(options);
 		log('have the token');
 }
 
