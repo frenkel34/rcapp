@@ -11,5 +11,5 @@ $('#btn_authorize').click(function() {
 
 $('#btn_openbrowser').click(function() {
 	log('Open browser');
-	cordova.InAppBrowser.open('http://www.aap.nl', '_blank', 'location=no');
+	var ref = cordova.InAppBrowser.open('http://phonegappro.com', '_blank', 'location=yes');
 });
