@@ -7,35 +7,30 @@ function onDeviceReady() {
 
 // A $( document ).ready() block.
 $( document ).ready(function() {
-  $('#lbl_currenturl').text(window.location.href);
+	var sDebug = $('#dbg_log').html()
+  $('#dbg_log').html('');
+  $('#dbg_log').html('current url: <br>'+ window.location.href + '<br>' + sDebug);
+  
+  var url=document.URL.split('#')[1];
+    if(url == undefined){
+        url = '';
+    }
+
+    if(url != ''){
+ 			log('Status: id_token found in url');
+ 			decodeToken();
+    } else {
+ 			log('Status: no id_token found in url');
+   };
 });
 
 $('#btn_authorize').click(function() {
-	log('start init');
-	var authClient = new OktaAuth({
-	  url: 'https://randomcompany.okta-emea.com',
-	  clientId: 'ZjHH7CYE8VKqjhoC7dAI',
-	  redirectUri: 'file:///android_asset/www/index.html'
-	});
-	log('start options');
-	var options = {
-	  responseType: 'id_token',
-	  scopes: ['openid', 'email']
-	};
-	authClient.token.getWithRedirect(options);
-	
-	// If the token is in the url after the redirect
-	authClient.token.parseFromUrl()
-	.then(function(tokenOrTokens) {
-	  // Manage token or tokens
-		log('then (Y)');
-	})
-	.catch(function(err) {
-	  // Handle OAuthError
-		log('catch (N)');
-	});
+	getToken();
+});
 
 
+$('#btn_home').click(function() {
+	window.location.href = window.location.pathname
 });
 
 $('#btn_openbrowser').click(function() {
