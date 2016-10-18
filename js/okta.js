@@ -10,11 +10,14 @@ function openBrowser() {
    var target = '_blank';
    var options = "location=yes"
    var ref = cordova.InAppBrowser.open(url, target, options);
+   log('starting to set event listeners');
 
    ref.addEventListener('loadstart', loadstartCallback);
    ref.addEventListener('loadstop', loadstopCallback);
    ref.addEventListener('loadloaderror', loaderrorCallback);
    ref.addEventListener('exit', exitCallback);
+
+  log('waiting for it...');
 
    function loadstartCallback(event) {
       log('Loading started: '  + event.url)
