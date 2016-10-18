@@ -15,7 +15,7 @@ $('#btn_authorize').click(function() {
 	var authClient = new OktaAuth({
 	  url: 'https://randomcompany.okta-emea.com',
 	  clientId: 'ZjHH7CYE8VKqjhoC7dAI',
-	  redirectUri: 'file:///android_asset/www/index.html';
+	  redirectUri: 'file:///android_asset/www/index.html'
 	});
 	log('start options');
 	var options = {
