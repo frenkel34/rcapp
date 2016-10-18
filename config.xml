@@ -17,7 +17,10 @@
 		<platform name="android" />
 
     <preference name="phonegap-version" value="3.0.0" />  
-    <gap:plugin name="org.apache.cordova.core.inappbrowser" />
+
+		<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+		<access origin="*" browserOnly="true"/>
+
     
     
 </widget>
