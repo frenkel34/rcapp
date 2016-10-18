@@ -2,8 +2,13 @@
 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-    log("window.open works well");
-}
+	log('start init');
+	var authClient = new OktaAuth({
+	  url: 'https://randomcompany.okta-emea.com',
+	  clientId: 'ZjHH7CYE8VKqjhoC7dAI'
+	});
+		log('end init');
+};
 
 $('#btn_authorize').click(function() {
 	log('Click');
