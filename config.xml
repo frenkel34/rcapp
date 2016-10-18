@@ -4,7 +4,7 @@
         id        = "com.phonegap.hello-world"
         version   = "1.0.0">
 
-    <name>InAppBrowser App 7</name>
+    <name>InAppBrowser App 6</name>
 
     <description>
         InAppBrowser example app.
@@ -17,13 +17,7 @@
 		<platform name="android" />
 
     <preference name="phonegap-version" value="3.0.0" />  
-
-		<feature name="InAppBrowser">
-		  <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
-		</feature>
-
-		<access origin="*" browserOnly="true"/>
-
+    <gap:plugin name="org.apache.cordova.core.inappbrowser" />
     
     
 </widget>
