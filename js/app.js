@@ -16,6 +16,5 @@ $('#btn_authorize').click(function() {
 
 $('#btn_openbrowser').click(function() {
 	log('Open browser');
-	testBrowser();
-	openBrowser();
+	openBrowser('http://www.aap.nl');
 });
