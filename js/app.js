@@ -2,7 +2,7 @@
 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-    alert("window.open works well");
+    log("window.open works well");
 }
 
 $('#btn_authorize').click(function() {
