@@ -5,6 +5,7 @@ function log(oPayload) {
 }
 
 function openBrowser() {
+   log('starting to open browser');
    var url = 'https://cordova.apache.org';
    var target = '_blank';
    var options = "location=yes"
@@ -16,18 +17,18 @@ function openBrowser() {
    ref.addEventListener('exit', exitCallback);
 
    function loadstartCallback(event) {
-      console.log('Loading started: '  + event.url)
+      log('Loading started: '  + event.url)
    }
 
    function loadstopCallback(event) {
-      console.log('Loading finished: ' + event.url)
+      log('Loading finished: ' + event.url)
    }
 
    function loaderrorCallback(error) {
-      console.log('Loading error: ' + error.message)
+      log('Loading error: ' + error.message)
    }
 
    function exitCallback() {
-      console.log('Browser is closed...')
+      log('Browser is closed...')
    }
 }
