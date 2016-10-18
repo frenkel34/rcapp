@@ -18,7 +18,10 @@
 
     <preference name="phonegap-version" value="3.0.0" />  
 
-		<plugin name="InAppBrowser" value="CDVInAppBrowser" /> 
+		<feature name="InAppBrowser">
+		  <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
+		</feature>
+
 		<access origin="*" browserOnly="true"/>
 
     
