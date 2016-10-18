@@ -5,6 +5,7 @@ function log(oPayload) {
 	var sDebug = $('#dbg_log').html()
   $('#dbg_log').html('');
   $('#dbg_log').html('log message: <br>'+ oPayload + '<br><br>' + sDebug +'');
+  console.log(oPayload);
 
 }
 
@@ -70,7 +71,7 @@ function getToken(){
 		};
 	
 		log('get the token');
-		authClient.token.getWithPopup(options);
+		authClient.token.getWithRedirect(options);
 		log('have the token');
 }
 
