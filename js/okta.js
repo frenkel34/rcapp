@@ -4,6 +4,12 @@ function log(oPayload) {
 	alert(oPayload);
 }
 
+function testBrowser() {
+log('start test');
+	window.open('http://www.google.nl', '_blank', 'location=no');
+log('end test');
+};
+
 function openBrowser() {
    log('starting to open browser');
    var url = 'https://cordova.apache.org';
