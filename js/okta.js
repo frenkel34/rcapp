@@ -9,6 +9,7 @@ function openBrowser() {
    var url = 'https://cordova.apache.org';
    var target = '_blank';
    var options = "location=yes"
+   log('waiting for it');
    var ref = cordova.InAppBrowser.open(url, target, options);
    log('starting to set event listeners');
 
