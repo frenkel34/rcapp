@@ -11,5 +11,5 @@ $('#btn_authorize').click(function() {
 
 $('#btn_openbrowser').click(function() {
 	log('Open browser');
-	var ref = cordova.InAppBrowser.open('http://phonegappro.com', '_blank', 'location=yes');
+	openBrowser();
 });
