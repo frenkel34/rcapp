@@ -1,7 +1,7 @@
 // Okta JS lib
 
 function log(oPayload) {
-	alert(oPayload);
+	console.log(oPayload);
 }
 
 function openBrowser() {
