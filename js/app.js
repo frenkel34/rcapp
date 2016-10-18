@@ -14,12 +14,10 @@ $('#btn_authorize').click(function() {
 	log('start init');
 	var authClient = new OktaAuth({
 	  url: 'https://randomcompany.okta-emea.com',
-	  clientId: 'ZjHH7CYE8VKqjhoC7dAI'
+	  clientId: 'ZjHH7CYE8VKqjhoC7dAI',
+	  redirectUri: 'file:///android_asset/www/index.html';
 	});
-	log('end init');
-	log('end init');
-
-
+	log('start options');
 	var options = {
 	  responseType: 'id_token',
 	  scopes: ['openid', 'email']
@@ -30,9 +28,11 @@ $('#btn_authorize').click(function() {
 	authClient.token.parseFromUrl()
 	.then(function(tokenOrTokens) {
 	  // Manage token or tokens
+		log('then (Y)');
 	})
 	.catch(function(err) {
 	  // Handle OAuthError
+		log('catch (N)');
 	});
 
 
