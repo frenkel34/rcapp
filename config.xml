@@ -4,7 +4,7 @@
         id        = "com.phonegap.hello-world"
         version   = "1.0.0">
 
-    <name>OIDC App Okta v9.1</name>
+    <name>OIDC App Okta v9.2</name>
 
     <description>
         InAppBrowser example app.
