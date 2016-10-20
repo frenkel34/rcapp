@@ -30,7 +30,7 @@ $('#btn_authorize').click(function() {
 
 $('#btn_home').click(function() {
 	window.location.href = window.location.pathname
-}
+});
 
 $('#btn_inapp2').click(function() {
 console.log('start test inapp2');
