@@ -37,3 +37,7 @@ $('#btn_openbrowser').click(function() {
 	log('Open browser');
 	openBrowser('http://www.aap.nl');
 });
+
+$('#btn_revoke').click(function() {
+	revoketoken()
+});

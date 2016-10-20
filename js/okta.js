@@ -29,6 +29,11 @@ function getUrlParameter(sParam) {
 };
 
 
+function revoketoken() {
+	log('revoking the token');
+	log('done revoking');
+}
+
 function getToken(){
     log('getting a token');
 		log('start options');
@@ -51,6 +56,10 @@ function decodeToken(){
 		log('then (Y)');
 		log(JSON.stringify(idToken));
 		log(idToken.claims.email);
+
+
+
+
 	})
 	.catch(function(err) {
 	  // Handle OAuthError
