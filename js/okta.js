@@ -46,8 +46,8 @@ function getSession() {
 	  	} 
 	}
 	$.ajax(settings).done(function (response) {
-	  console.log(response);
-		console.log('done getting the session');
+	  log(response);
+		log('done getting the session...');
 	})
 }
 
