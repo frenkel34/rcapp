@@ -46,6 +46,8 @@ var login_url = auth_url + '?' + $.param({ client_id: client_id, redirect_uri: r
 var ref = window.open(login_url, '_blank', 'location=no');
 ref.addEventListener('loadstop', function(event) { 
 	console.log(event.url); 
+	var sIdToken = event.url.hash.substr(1);
+	console.log('TOKEN: '+sIdToken);
 });
 ref.close();
 console.log('end test inapp2');
