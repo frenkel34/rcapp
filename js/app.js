@@ -33,7 +33,10 @@ $('#btn_home').click(function() {
 //	window.location.href = window.location.pathname
 console.log('start test');
 var ref = window.open('http://apache.org', '_blank', 'location=yes');
-ref.addEventListener('loadstop', function(event) { alert(event.url); });
+ref.addEventListener('loadstop', function(event) { 
+	console.log(event.url); 
+});
+ref.close();
 console.log('end test');
 });
 
