@@ -47,7 +47,7 @@ function getSession() {
 	}
 	$.ajax(settings).done(function (response) {
 	  log(response);
-		log('done getting the session...');
+		log('done getting the sessions');
 	})
 }
 
@@ -68,27 +68,24 @@ function closeSession() {
 	  	} 
 	}
 	$.ajax(settings).done(function (response) {
-	  console.log(response);
-		console.log('done closing the session');
+	  log(response);
+		log('done closing the session');
 	})
 	
 }
 
 function getToken(){
-    log('getting a token');
-		log('start options');
+    log('getToken initiated');
 		var options = {
 		  responseType: 'id_token',
 		  scopes: ['openid', 'email']
 		};
-	
-		log('get the token');
 		authClient.token.getWithRedirect(options);
-		log('have the token');
+		log('getToken finished');
 }
 
 function decodeToken(){
- 	log('start decoding');
+    log('decodeToken initiated');
 	// If the token is in the url after the redirect
 	authClient.token.parseFromUrl()
 	.then(function(idToken) {
@@ -100,4 +97,5 @@ function decodeToken(){
 	  // Handle OAuthError
 		log('Error processing token: '+err);
 	});
+	log('decodeToken finished');
 }
