@@ -34,6 +34,7 @@ $('#btn_home').click(function() {
 
 $('#btn_inapp2').click(function() {
 console.log('start test inapp2');
+var auth_url = 'https://randomcompany.okta-emea.com/oauth2/v1/authorize';
 var client_id = 'ZjHH7CYE8VKqjhoC7dAI';
 var redirect_uri = 'file:///android_asset/www/index.html';
 var response_type = 'id_token'
