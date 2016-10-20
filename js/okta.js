@@ -29,9 +29,49 @@ function getUrlParameter(sParam) {
 };
 
 
-function revoketoken() {
-	log('revoking the token');
-	log('done revoking');
+function getSession() {
+	console.log('getting the session');
+	var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": "https://randomcompany.okta-emea.com/api/v1/sessions/me",
+	  "method": "GET",
+	  "headers": {
+	    "accept": "application/json",
+	    "content-type": "application/json",
+	    "cache-control": "no-cache"
+	  	},
+	  "xhrFields" : {
+	  	"withCredentials": "true" 
+	  	} 
+	}
+	$.ajax(settings).done(function (response) {
+	  console.log(response);
+		console.log('done getting the session');
+	})
+}
+
+function closeSession() {
+	console.log('getting the session');
+	var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": "https://randomcompany.okta-emea.com/api/v1/sessions/me",
+	  "method": "DELETE",
+	  "headers": {
+	    "accept": "application/json",
+	    "content-type": "application/json",
+	    "cache-control": "no-cache"
+	  	},
+	  "xhrFields" : {
+	  	"withCredentials": "true" 
+	  	} 
+	}
+	$.ajax(settings).done(function (response) {
+	  console.log(response);
+		console.log('done closing the session');
+	})
+	
 }
 
 function getToken(){
@@ -53,13 +93,8 @@ function decodeToken(){
 	authClient.token.parseFromUrl()
 	.then(function(idToken) {
 	  // Manage token or tokens
-		log('then (Y)');
 		log(JSON.stringify(idToken));
 		log(idToken.claims.email);
-
-
-
-
 	})
 	.catch(function(err) {
 	  // Handle OAuthError

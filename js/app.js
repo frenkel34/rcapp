@@ -34,10 +34,25 @@ $('#btn_home').click(function() {
 });
 
 $('#btn_openbrowser').click(function() {
-	log('Open browser');
-	openBrowser('http://www.aap.nl');
+//	log('Open browser');
+//	$.ajax({
+//	  url: "https://randomcompany.okta-emea.com/login/signout",
+//	  context: document.body
+//	}).done(function() {
+//	  window.location.href = window.location.pathname
+//	});	
+	
+	
+	window.location.replace('https://randomcompany.okta-emea.com/login/signout?fromURI=https://randomcompany.nl/rcapp/');
+	
+	
 });
 
-$('#btn_revoke').click(function() {
-	revoketoken()
+
+$('#btn_closesession').click(function() {
+	closeSession()
+});
+
+$('#btn_getsession').click(function() {
+	getSession()
 });
