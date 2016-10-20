@@ -28,16 +28,26 @@ $('#btn_authorize').click(function() {
 	getToken();
 });
 
-
 $('#btn_home').click(function() {
-//	window.location.href = window.location.pathname
-console.log('start test');
-var ref = window.open('http://apache.org', '_blank', 'location=yes');
+	window.location.href = window.location.pathname
+}
+
+$('#btn_inapp2').click(function() {
+console.log('start test inapp2');
+var client_id = 'ZjHH7CYE8VKqjhoC7dAI';
+var redirect_uri = 'file:///android_asset/www/index.html';
+var response_type = 'id_token'
+var scope = 'openid profile';
+var nonce = 'someNonce';
+var state = 'someState';
+var login_url = auth_url + '?' + $.param({ client_id: client_id, redirect_uri: redirect_uri, response_type: response_type, scope: scope, nonce: nonce, state: state});
+
+var ref = window.open(login_url, '_blank', 'location=no');
 ref.addEventListener('loadstop', function(event) { 
 	console.log(event.url); 
 });
 ref.close();
-console.log('end test');
+console.log('end test inapp2');
 });
 
 $('#btn_openbrowser').click(function() {
