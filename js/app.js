@@ -48,6 +48,22 @@ $('#btn_openbrowser').click(function() {
 	
 });
 
+$('#btn_inapplogin').click(function() {
+var auth_url = 'https://randomcompany.okta-emea.com/oauth2/v1/authorize';
+var client_id = 'ZjHH7CYE8VKqjhoC7dAI';
+var redirect_uri = 'http://localhost:8000/';
+var response_type = 'id_token'
+var scope = 'openid profile';
+var nonce = 'someNonce';
+var state = 'someState';
+var login_url = auth_url + '?' + $.param({ client_id: client_id, redirect_uri: redirect_uri, response_type: response_type, scope: scope, nonce: nonce, state: state});
+
+var loginWindow = window.open(login_url, '_blank', 'location=no');
+
+
+});
+
+
 
 $('#btn_closesession').click(function() {
 	closeSession()
