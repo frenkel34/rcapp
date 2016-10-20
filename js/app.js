@@ -32,7 +32,7 @@ $('#btn_authorize').click(function() {
 $('#btn_home').click(function() {
 //	window.location.href = window.location.pathname
 console.log('start test');
-var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+var ref = window.open('http://apache.org', '_blank', 'location=yes');
 ref.addEventListener('loadstart', function(event) { alert(event.url); });
 console.log('end test');
 });
