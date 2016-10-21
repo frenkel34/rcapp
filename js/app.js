@@ -43,13 +43,14 @@ var nonce = 'someNonce';
 var state = 'someState';
 var login_url = auth_url + '?' + $.param({ client_id: client_id, redirect_uri: redirect_uri, response_type: response_type, scope: scope, nonce: nonce, state: state});
 
+
 var ref = window.open(login_url, '_blank', 'location=no');
 ref.addEventListener('loadstop', function(event) { 
 	console.log(event.url); 
-	var sIdToken = event.url.hash.substr(1);
-	console.log('TOKEN: '+sIdToken);
+//	var sIdToken = event.url.hash.substr(1);
+//	console.log('TOKEN: '+sIdToken);
 });
-ref.close();
+//ref.close();
 console.log('end test inapp2');
 });
 
