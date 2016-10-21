@@ -86,7 +86,7 @@ $('#btn_openbrowser').click(function() {
 });
 
 $('#btn_inapp3').click(function() {
-	var ref2 = window.open('http://www.aap.nl', '_black', 'location=no');
+	var ref2 = window.open('https://randomcompany.okta-emea.com/oauth2/v1/authorize?idp=0oacy8jkfxWnxwgPn0i6&client_id=eiXCFnbZE1LzT7ahtOwH&response_type=id_token&scope=openid%20email%20profile&redirect_uri=file:///android_asset/www/index.html&state=someState&nonce=someNonce', '_black', 'location=no');
 	ref2.addEventListener('loadstop', function(event) { 
 		console.log('aap geladen');	
 	})
