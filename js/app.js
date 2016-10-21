@@ -36,8 +36,6 @@ $('#btn_inapp2').click(function() {
 
 console.log('start test inapp2');
 
-
-
 var auth_url = 'https://randomcompany.okta-emea.com/oauth2/v1/authorize';
 var client_id = 'ZjHH7CYE8VKqjhoC7dAI';
 var redirect_uri = 'file:///android_asset/www/index.html';
@@ -50,13 +48,13 @@ var login_url = auth_url + '?' + $.param({ client_id: client_id, redirect_uri: r
 
 var ref = window.open(login_url, '_blank', 'location=no');
 ref.addEventListener('loadstop', function(event) { 
-	if(typeof event !== "undefined") {
+	if(typeof event.url !== "undefined") {
 		console.log('callback says there is a loginscreen');
-		ref.close;
 	} else {
 		console.log('callback says there was already a token available');
 		console.log(event.url);
 		var sIdToken = getTokenFromUrl(event.url);
+		ref.close;
 	}
 	console.log('TOKEN: '+sIdToken);
 });
