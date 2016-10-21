@@ -46,27 +46,29 @@ var state = 'someState';
 var login_url = auth_url + '?' + $.param({ client_id: client_id, redirect_uri: redirect_uri, response_type: response_type, scope: scope, nonce: nonce, state: state});
 
 
-var ref = window.open(login_url, '_self', 'location=no');
-ref.addEventListener('loadstop', function(event) { 
-	console.log('addEventListener triggered');
-	console.log(event);
-	if(typeof event.url != 'undefined') {
-		console.log('callback says there is a loginscreen');
-	} else {
-		console.log('callback says there was already a token available');
-		console.log(event.url);
-		var sIdToken = getTokenFromUrl(event.url);
-		ref.close;
-	}
-	console.log('TOKEN: '+sIdToken);
-});
-//ref.close();
-ref.addEventListener('loaderror', function(event) { 
-	console.log('An error occured in the inapp browser');
-});
+var ref2 = window.open(login_url, '_self', 'location=no');
+ref2.addEventListener('loaderror', function(event2) { alert('error on '+event2.url); });
 
-console.log('end test inapp2');
-});
+
+var ref = window.open(login_url, '_self', 'location=no');
+	ref.addEventListener('loadstop', function(event) { 
+		console.log('addEventListener triggered');
+		console.log(event);
+		if(typeof event.url != 'undefined') {
+			console.log('callback says there is a loginscreen');
+		} else {
+			console.log('callback says there was already a token available');
+			console.log(event.url);
+			var sIdToken = getTokenFromUrl(event.url);
+			ref.close;
+		}
+		console.log('TOKEN: '+sIdToken);
+	});
+	ref.addEventListener('loaderror', function(event) { 
+		console.log('An error occured in the inapp browser');
+	});
+		console.log('end test inapp2');
+	});
 
 $('#btn_openbrowser').click(function() {
 //	log('Open browser');
