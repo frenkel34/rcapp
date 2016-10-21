@@ -33,7 +33,11 @@ $('#btn_home').click(function() {
 });
 
 $('#btn_inapp2').click(function() {
+
 console.log('start test inapp2');
+
+
+
 var auth_url = 'https://randomcompany.okta-emea.com/oauth2/v1/authorize';
 var client_id = 'ZjHH7CYE8VKqjhoC7dAI';
 var redirect_uri = 'file:///android_asset/www/index.html';
@@ -46,8 +50,8 @@ var login_url = auth_url + '?' + $.param({ client_id: client_id, redirect_uri: r
 
 var ref = window.open(login_url, '_blank', 'location=no');
 ref.addEventListener('loadstop', function(event) { 
-	console.log(event.url); 
-	var sIdToken = event.url.hash.substr(1);
+	console.log(event.url);
+	var sIdToken = getTokenFromUrl(event.url);
 	console.log('TOKEN: '+sIdToken);
 });
 //ref.close();
