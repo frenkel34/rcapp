@@ -64,6 +64,7 @@ ref.addEventListener('loadstop', function(event) {
 ref.addEventListener('loaderror', function(event) { 
 	console.log('An error occured in the inapp browser');
 });
+
 console.log('end test inapp2');
 });
 
@@ -83,8 +84,8 @@ $('#btn_openbrowser').click(function() {
 });
 
 $('#btn_inapp3').click(function() {
-	var ref = window.open('http://www.aap.nl', '_black', 'location=no');
-	ref.addEventListener('loadstop', function(event) { 
+	var ref2 = window.open('http://www.aap.nl', '_black', 'location=no');
+	ref2.addEventListener('loadstop', function(event) { 
 		console.log('aap geladen');	
 	})
 });
