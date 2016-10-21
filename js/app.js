@@ -50,8 +50,14 @@ var login_url = auth_url + '?' + $.param({ client_id: client_id, redirect_uri: r
 
 var ref = window.open(login_url, '_blank', 'location=no');
 ref.addEventListener('loadstop', function(event) { 
-	console.log(event.url);
-	var sIdToken = getTokenFromUrl(event.url);
+	if if(typeof event !== "undefined") {
+		console.log('callback says there is a loginscreen');
+		ref.close;
+	} else {
+		console.log('callback says there was already a token available');
+		console.log(event.url);
+		var sIdToken = getTokenFromUrl(event.url);
+	}
 	console.log('TOKEN: '+sIdToken);
 });
 //ref.close();
