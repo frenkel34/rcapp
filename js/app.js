@@ -46,7 +46,7 @@ var state = 'someState';
 var login_url = auth_url + '?' + $.param({ client_id: client_id, redirect_uri: redirect_uri, response_type: response_type, scope: scope, nonce: nonce, state: state});
 
 
-var ref = window.open(login_url, '_blank', 'location=no');
+var ref = window.open(login_url, '_self', 'location=no');
 ref.addEventListener('loadstop', function(event) { 
 	console.log('addEventListener triggered');
 	console.log(event);
@@ -61,6 +61,9 @@ ref.addEventListener('loadstop', function(event) {
 	console.log('TOKEN: '+sIdToken);
 });
 //ref.close();
+ref.addEventListener('loadstop', function(event) { 
+	console.log('An error occured in the inapp browser');
+});
 console.log('end test inapp2');
 });
 
@@ -78,6 +81,14 @@ $('#btn_openbrowser').click(function() {
 	
 	
 });
+
+$('#btn_inapp3').click(function() {
+	var ref = cordova.InAppBrowser.open('http://www.aap.nl', '_black', 'location=no');
+	ref.addEventListener('loadstop', function(event) { 
+		console.log('aap geladen');	
+	})
+});
+
 
 $('#btn_inapplogin').click(function() {
 var auth_url = 'https://randomcompany.okta-emea.com/oauth2/v1/authorize';
