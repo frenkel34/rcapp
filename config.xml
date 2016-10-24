@@ -4,7 +4,7 @@
         id        = "com.okta.oidc-emirates-demo"
         version   = "2.2.1">
 
-    <name>Emirates Demo App 2.2.1</name>
+    <name>Emirates Demo App</name>
 
     <description>
         Native demo application for demonstration of Open ID Connect to the Okta platform.
