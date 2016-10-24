@@ -1,25 +1,25 @@
-		<?xml version="1.0" encoding="UTF-8"?>
-	<widget xmlns = "http://www.w3.org/ns/widgets"
-		xmlns:gap = "http://phonegap.com/ns/1.0"
-		xmlns:android = "http://schemas.android.com/apk/res/android"
-		id        = "com.okta.oidc-emirates-demo"
-		versionCode=""
-		version   = "2.2.1">
-		<name>Emirates Demo App 2.2.1		</name>
-		<description>Native demo application for demonstration of Open ID Connect to the Okta platform.		</description>
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.okta.oidc-emirates-demo"
+        version   = "2.2.1">
+
+    <name>Emirates Demo App 2.2.1</name>
+
+    <description>
+        Native demo application for demonstration of Open ID Connect to the Okta platform.
+    </description>
+
 		<author href="http://www.okta.com" email="frank.benus@okta.com">Frank Benus | Okta		</author>
-		<preference name="phonegap-version" value="3.3.0" />
+
+    <preference name="phonegap-version" value="3.3.0" />  
 		<preference name="orientation" value="default" />
 		<preference name="fullscreen" value="false" />
-		<platform name="android">
-		<icon src="/rcapp/images/res/icons/android/icon-36-ldpi.png" qualifier="ldpi" />
-		<icon src="/rcapp/images/res/icons/android/icon-48-mdpi.png" qualifier="mdpi" />
-		<icon src="/rcapp/images/res/icons/android/icon-72-hdpi.png" qualifier="hdpi" />
-		<icon src="/rcapp/images/res/icons/android/icon-96-xhdpi.png" qualifier="xhdpi" />
-		<icon src="/rcapp/images/res/icons/android/icon-144-xxhdpi.png" qualifier="xxhdpi" />
-		<icon src="/rcapp/images/res/icons/android/icon-192-xxxhdpi.png" qualifier="xxxhdpi" />
-		</platform>
-	 	<icon src="icon.png" />
-		<access origin="http://www.randomcompany.nl/rcapp/" subdomains="false" />
-		<access origin="https://platformdemo.oktapreview.com/" subdomains="false" />
-		</widget>
+
+		<platform name="android" />
+
+		    
+    <gap:plugin name="org.apache.cordova.core.inappbrowser" />
+    <access origin="*" />
+    
+</widget>
