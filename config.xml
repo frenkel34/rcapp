@@ -5,7 +5,7 @@
 		id        = "com.okta.oidc-emirates-demo"
 		versionCode=""
 		version   = "2.2.1">
-		<name>Emirates Demo app 2.2.1		</name>
+		<name>Emirates Demo App 2.2.1		</name>
 		<description>Native demo application for demonstration of Open ID Connect to the Okta platform.		</description>
 		<author href="http://www.okta.com" email="frank.benus@okta.com">Frank Benus | Okta		</author>
 		<preference name="phonegap-version" value="3.3.0" />
