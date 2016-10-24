@@ -28,33 +28,75 @@ $('#btn_authorize').click(function() {
 	getToken();
 });
 
-
 $('#btn_home').click(function() {
-//	window.location.href = window.location.pathname
-var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-ref.addEventListener('loadstart', function(event) { alert(event.url); });
-
+	window.location.href = window.location.pathname
 });
+
+$('#btn_inapp2').click(function() {
+
+console.log('start test inapp2');
+
+var auth_url = 'https://randomcompany.okta-emea.com/oauth2/v1/authorize';
+var client_id = 'ZjHH7CYE8VKqjhoC7dAI';
+var redirect_uri = 'file:///android_asset/www/index.html';
+var response_type = 'id_token'
+var scope = 'openid profile';
+var nonce = 'someNonce';
+var state = 'someState';
+var login_url = auth_url + '?' + $.param({ client_id: client_id, redirect_uri: redirect_uri, response_type: response_type, scope: scope, nonce: nonce, state: state});
+
+
+var ref2 = window.open(login_url, '_self', 'location=no');
+ref2.addEventListener('loaderror', function(event2) { alert('error on '+event2.url); });
+
+
+var ref = window.open(login_url, '_self', 'location=no');
+	ref.addEventListener('loadstop', function(event) { 
+		console.log('addEventListener triggered');
+		console.log(event);
+		if(typeof event.url != 'undefined') {
+			console.log('callback says there is a loginscreen');
+		} else {
+			console.log('callback says there was already a token available');
+			console.log(event.url);
+			var sIdToken = getTokenFromUrl(event.url);
+			ref.close;
+		}
+		console.log('TOKEN: '+sIdToken);
+	});
+	ref.addEventListener('loaderror', function(event) { 
+		console.log('An error occured in the inapp browser');
+	});
+		console.log('end test inapp2');
+	});
 
 $('#btn_openbrowser').click(function() {
 //	log('Open browser');
 //	$.ajax({
-//	  url: "ttps://platformdemo-admin.oktapreview.com/login/signout",
+//	  url: "https://randomcompany.okta-emea.com/login/signout",
 //	  context: document.body
 //	}).done(function() {
 //	  window.location.href = window.location.pathname
 //	});	
 	
 	
-	window.open('https://www.randomcompany.nl/rcapp/');
+	window.location.replace('https://randomcompany.okta-emea.com/login/signout?fromURI=https://randomcompany.nl/rcapp/');
 	
 	
 });
 
+$('#btn_inapp3').click(function() {
+	var ref2 = window.open('https://randomcompany.okta-emea.com/oauth2/v1/authorize?idp=0oacy8jkfxWnxwgPn0i6&client_id=eiXCFnbZE1LzT7ahtOwH&response_type=id_token&scope=openid%20email%20profile&redirect_uri=file:///android_asset/www/index.html&state=someState&nonce=someNonce', '_black', 'location=no');
+	ref2.addEventListener('loadstop', function(event) { 
+		console.log('aap geladen');	
+	})
+});
+
+
 $('#btn_inapplogin').click(function() {
-var auth_url = 'https://platformdemo-admin.oktapreview.com/oauth2/v1/authorize';
+var auth_url = 'https://randomcompany.okta-emea.com/oauth2/v1/authorize';
 var client_id = 'ZjHH7CYE8VKqjhoC7dAI';
-var redirect_uri = location.protocol + '//' + location.host + location.pathname;
+var redirect_uri = 'file:///android_asset/www/index.html';
 var response_type = 'id_token'
 var scope = 'openid profile';
 var nonce = 'someNonce';

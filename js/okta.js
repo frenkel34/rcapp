@@ -5,8 +5,26 @@ function log(oPayload) {
 	var sDebug = $('#dbg_log').html()
   $('#dbg_log').html('');
   $('#dbg_log').html('log message: <br>'+ oPayload + '<br><br>' + sDebug +'');
+	
   console.log(oPayload);
 
+}
+
+function getTokenFromUrl(url) {
+//	url='file:///android_asset/www/index.html#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IIMjwt7y5LpHzL1z3HMKa9VNZQUKc-o0O7VmDBAmqyQ3GxlTklEml91hn3g&state=someState'
+	//Split on hash
+	var aQueryString = url.split("#");
+	//get second value, so dropping the url
+	var sQuerystring = aQueryString[1];
+	//split this on & to get rid of other params
+	var aParams = sQuerystring.split("&");
+	//get the pair
+	var sTokenPair = aParams[0];
+	//split this on equal to get the value without the key
+	var aTokenValue = sTokenPair.split("=");
+	sTokenValue = aTokenValue[1];
+	console.log('token from url: '+sTokenValue);
+	return sTokenValue
 }
 
 function openBrowser(url) {
@@ -34,7 +52,7 @@ function getSession() {
 	var settings = {
 	  "async": true,
 	  "crossDomain": true,
-	  "url": "https://platformdemo.oktapreview.com/api/v1/sessions/me",
+	  "url": "https://randomcompany.okta-emea.com/api/v1/sessions/me",
 	  "method": "GET",
 	  "headers": {
 	    "accept": "application/json",
@@ -56,7 +74,7 @@ function closeSession() {
 	var settings = {
 	  "async": true,
 	  "crossDomain": true,
-	  "url": "https://platformdemo.oktapreview.com/api/v1/sessions/me",
+	  "url": "https://randomcompany.okta-emea.com/api/v1/sessions/me",
 	  "method": "DELETE",
 	  "headers": {
 	    "accept": "application/json",
