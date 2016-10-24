@@ -24,7 +24,7 @@
 		<icon src="/rcapp/images/res/icons/android/icon-144-xxhdpi.png" qualifier="xxhdpi" />
 		<icon src="/rcapp/images/res/icons/android/icon-192-xxxhdpi.png" qualifier="xxxhdpi" />
 		</platform>
-		<icon src="images/res/icon.png" />
+		<icon src="res/icon.png" />
 		    
     <gap:plugin name="org.apache.cordova.core.inappbrowser" />
     <access origin="*" />
