@@ -16,10 +16,18 @@
 		<preference name="orientation" value="default" />
 		<preference name="fullscreen" value="false" />
 
-		<platform name="android" />
+		<platform name="android">
+		<icon src="/rcapp/images/res/icons/android/icon-36-ldpi.png" qualifier="ldpi" />
+		<icon src="/rcapp/images/res/icons/android/icon-48-mdpi.png" qualifier="mdpi" />
+		<icon src="/rcapp/images/res/icons/android/icon-72-hdpi.png" qualifier="hdpi" />
+		<icon src="/rcapp/images/res/icons/android/icon-96-xhdpi.png" qualifier="xhdpi" />
+		<icon src="/rcapp/images/res/icons/android/icon-144-xxhdpi.png" qualifier="xxhdpi" />
+		<icon src="/rcapp/images/res/icons/android/icon-192-xxxhdpi.png" qualifier="xxxhdpi" />
+		</platform>
 
 		    
     <gap:plugin name="org.apache.cordova.core.inappbrowser" />
     <access origin="*" />
     
 </widget>
+
