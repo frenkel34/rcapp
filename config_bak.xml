@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.okta.oidc-app"
+        version   = "9.5.0">
+
+    <name>OIDC App Okta v9.5.0</name>
+
+    <description>
+        Test your OIDC oAuth2.0 implicit flow on Android
+    </description>
+
+    <author href="http://phonegap.com" email="support@phonegap.com">
+        PhoneGap Team
+    </author>
+
+		<platform name="android" />
+
+    <preference name="phonegap-version" value="3.3.0" />  
+    <gap:plugin name="org.apache.cordova.core.inappbrowser" />
+    <access origin="*" />
+    
+</widget>

@@ -1,23 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.okta.oidc-app"
-        version   = "9.5.0">
-
-    <name>OIDC App Okta v9.5.0</name>
-
-    <description>
-        Test your OIDC oAuth2.0 implicit flow on Android
-    </description>
-
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
-    </author>
-
-		<platform name="android" />
-
-    <preference name="phonegap-version" value="3.3.0" />  
-    <gap:plugin name="org.apache.cordova.core.inappbrowser" />
-    <access origin="*" />
-    
-</widget>
+		<?xml version="1.0" encoding="UTF-8"?>
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		id        = "com.okta.oidc-emirates-demo"
+		versionCode=""
+		version   = "2.2.1">
+		<name>Emirates Demo app 2.2.1		</name>
+		<description>Native demo application for demonstration of Open ID Connect to the Okta platform.		</description>
+		<author href="http://www.okta.com" email="frank.benus@okta.com">Frank Benus | Okta		</author>
+		<feature name="http://api.phonegap.com/1.0/battery" />
+		<feature name="http://api.phonegap.com/1.0/camera" />
+		<feature name="http://api.phonegap.com/1.0/contacts" />
+		<feature name="http://api.phonegap.com/1.0/file" />
+		<feature name="http://api.phonegap.com/1.0/geolocation" />
+		<feature name="http://api.phonegap.com/1.0/media" />
+		<feature name="http://api.phonegap.com/1.0/network" />
+		<feature name="http://api.phonegap.com/1.0/notification" />
+		<preference name="phonegap-version" value="3.7.0" />
+		<preference name="android-build-tool" value="gradle" />
+		<preference name="orientation" value="default" />
+		<preference name="fullscreen" value="false" />
+		<preference name="target-device" value="universal" />
+		<preference name="webviewbounce" value="true" />
+		<preference name="prerendered-icon" value="false" />
+		<preference name="stay-in-webview" value="true" />
+		<preference name="ios-statusbarstyle" value="black-transparent" />
+		<preference name="detect-data-types" value="true" />
+		<preference name="exit-on-suspend" value="true" />
+		<preference name="show-splash-screen-spinner" value="true" />
+		<preference name="auto-hide-splash-screen" value="true" />
+		<preference name="FadeSplashScreen " value="true" />
+		<preference name="EnableViewportScale" value="true" />
+		<preference name="MediaPlaybackRequiresUserAction" value="false" />
+		<preference name="AllowInlineMediaPlayback" value="true" />
+		<preference name="BackupWebStorage" value="none" />
+		<preference name="TopActivityIndicator" value="white" />
+		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
+		<preference name="KeyboardShrinksView " value="true" />
+		<preference name="HideKeyboardFormAccessoryBar" value="true" />
+		<preference name="SuppressesIncrementalRendering" value="true" />
+		<preference name="windows-identity-name" value="" />
+		<preference name="android-installLocation" value="auto" />
+		<preference name="SplashScreenDelay" value="2000" />
+		<preference name="ErrorUrl" value="null" />
+		<preference name="BackgroundColor" value="0x000000" />
+		<preference name="DisallowOverscroll" value="true" />
+		<preference name="LoadingDialog" value="," />
+		<preference name="LoadUrlTimeoutValue" value="null" />
+		<platform name="ios">
+		<icon src="/rcapp/images/res/icons/ios/icon-60-2x.png" width="120" height="120" />
+		<icon src="/rcapp/images/res/icons/ios/icon-60-3x.png" width="180" height="180" />
+		<icon src="/rcapp/images/res/icons/ios/icon-76.png" width="76" height="76" />
+		<icon src="/rcapp/images/res/icons/ios/icon-76-2x.png" width="152" height="152" />
+		</platform>
+		<platform name="android">
+		<icon src="/rcapp/images/res/icons/android/icon-36-ldpi.png" qualifier="ldpi" />
+		<icon src="/rcapp/images/res/icons/android/icon-48-mdpi.png" qualifier="mdpi" />
+		<icon src="/rcapp/images/res/icons/android/icon-72-hdpi.png" qualifier="hdpi" />
+		<icon src="/rcapp/images/res/icons/android/icon-96-xhdpi.png" qualifier="xhdpi" />
+		<icon src="/rcapp/images/res/icons/android/icon-144-xxhdpi.png" qualifier="xxhdpi" />
+		<icon src="/rcapp/images/res/icons/android/icon-192-xxxhdpi.png" qualifier="xxxhdpi" />
+		</platform>
+		<platform name="winphone">
+		</platform>
+		 <icon src="icon.png" />
+		<access origin="http://www.randomcompany.nl/rcapp/" subdomains="false" />
+		<access origin="https://platformdemo.oktapreview.com/" subdomains="false" />
+		</widget>
