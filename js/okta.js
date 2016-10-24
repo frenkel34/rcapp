@@ -45,10 +45,15 @@ function getSession() {
 	  	"withCredentials": "true" 
 	  	} 
 	}
-	$.ajax(settings).done(function (response) {
-	  log(response);
-		log('done getting the sessions');
-	})
+	$.ajax(settings)
+		.done(function (response) {
+		  log(response);
+			log('done getting the sessions');
+		})
+		.fail(function (response) {
+			log('There was an error while getting the session');
+		})
+	
 }
 
 function closeSession() {
@@ -67,10 +72,13 @@ function closeSession() {
 	  	"withCredentials": "true" 
 	  	} 
 	}
-	$.ajax(settings).done(function (response) {
-	  log(response);
-		log('done closing the session');
-	})
+		$.ajax(settings).done(function (response) {
+		  log(response);
+			log('done closing the session');
+		})
+		.fail(function (response) {
+			log('There was an error while closing the session');
+		})
 	
 }
 

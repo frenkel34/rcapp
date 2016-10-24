@@ -30,9 +30,9 @@ $('#btn_authorize').click(function() {
 
 
 $('#btn_home').click(function() {
-//	window.location.href = window.location.pathname
-var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
-ref.addEventListener('loadstart', function(event) { alert(event.url); });
+	window.location.href = window.location.pathname
+//var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+//ref.addEventListener('loadstart', function(event) { alert(event.url); });
 
 });
 
@@ -75,3 +75,9 @@ $('#btn_closesession').click(function() {
 $('#btn_getsession').click(function() {
 	getSession()
 });
+
+$('#btn_loginweb').click(function() {
+	window.open('https://www.randomcompany.nl/rcapp/', '_blank', 'location=no');
+
+});
+
