@@ -1,11 +1,66 @@
 <html>
 	<head>
+		<style>
+			body {
+				font-family: calibri;
+				margin:0;
+				padding:0;
+				font-size:2vh;
+			}
+			input {
+				width: 100vw;
+				padding:2vh;
+				font-size:2vh;
+				margin-bottom:1vh;
+			
+			}
+			input[type=text] {
+				background-color: #FFFFFF;
+				color: #5d5d5d;
+				border: solid 1px 0EB5EC;
+			}
+			input[type=button] {
+				background-color: #007DC1;
+				color: #FFFFFF;
+			}
+			p,h1 {
+				padding:1vh;
+			}
+		</style>
 		<script src="cordova.js"></script>
 		<script src="js/jquery-3.1.1.min.js"></script>
-		<script>
-			$( document ).ready(function() {
-				window.open('https://www.randomcompany.nl/rcapp/app.html', '_blank', 'location=no');
-			});
-		</script>
 	</head>
+	<body>
+		<div id="configPage">
+			<h1>Okta demo app</h1>
+			<p>Please setup the url you want to open when the app starts.</p>
+			<input id="rootDir" type="text" value="" placeholder="rootDir" /><br>
+			<input id="btn_save" type="button" value="save">
+		</div>
+		<div id="introPage">
+	</body>
+	<script>
+		$( document ).ready(function() {
+			var rootDir = localStorage.getItem('rootDir');
+			$('#rootDir').val(rootDir);
+			if (rootDir === null || rootDir =='') {
+				$('body').show();
+			}
+				else
+			{
+				window.open(rootDir, '_blank', 'location=no');
+			}
+		});
+
+		$( "#btn_reset" ).click(function() {
+		  localStorage.setItem('rootDir', '');
+		  alert('done a reset');
+		  location.reload();
+		});
+
+		$( "#btn_save" ).click(function() {
+		  localStorage.setItem('rootDir', $('#rootDir').val());
+		  location.reload();
+		});
+	</script>
 </html>

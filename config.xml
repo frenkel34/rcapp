@@ -2,32 +2,25 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.okta.oidc-emirates-demo"
-        version   = "2.2.1">
-
-    <name>Emirates Demo App</name>
-
+        version   = "3.0.1">
+    <name>Okta Demo App</name>
     <description>
-        Native demo application for demonstration of Open ID Connect to the Okta platform.
+        Native demo application for opening urls that are hosted elsewhere online to demo native app experience. 
     </description>
-
-		<author href="http://www.okta.com" email="frank.benus@okta.com">Frank Benus | Okta		</author>
-
-    <preference name="phonegap-version" value="3.3.0" />  
-		<preference name="orientation" value="default" />
-		<preference name="fullscreen" value="false" />
-
-		<platform name="android">
-		<icon src="res/icons/android/icon-36-ldpi.png" qualifier="ldpi" />
-		<icon src="res/icons/android/icon-48-mdpi.png" qualifier="mdpi" />
-		<icon src="res/icons/android/icon-72-hdpi.png" qualifier="hdpi" />
-		<icon src="res/icons/android/icon-96-xhdpi.png" qualifier="xhdpi" />
-		<icon src="res/icons/android/icon-144-xxhdpi.png" qualifier="xxhdpi" />
-		<icon src="res/icons/android/icon-192-xxxhdpi.png" qualifier="xxxhdpi" />
-		</platform>
-		<icon src="res/icon.png" />
-		    
-    <gap:plugin name="org.apache.cordova.core.inappbrowser" />
-    <access origin="*" />
-    
+	<author href="http://www.okta.com" email="frank.benus@okta.com">Frank Benus | Okta</author>
+	<preference name="phonegap-version" value="3.3.0" />  
+	<preference name="orientation" value="default" />
+	<preference name="fullscreen" value="false" />
+	<platform name="android">
+	<icon src="res/icons/android/icon-36-ldpi.png" qualifier="ldpi" />
+	<icon src="res/icons/android/icon-48-mdpi.png" qualifier="mdpi" />
+	<icon src="res/icons/android/icon-72-hdpi.png" qualifier="hdpi" />
+	<icon src="res/icons/android/icon-96-xhdpi.png" qualifier="xhdpi" />
+	<icon src="res/icons/android/icon-144-xxhdpi.png" qualifier="xxhdpi" />
+	<icon src="res/icons/android/icon-192-xxxhdpi.png" qualifier="xxxhdpi" />
+	</platform>
+	<icon src="res/icon.png" />
+	<gap:plugin name="org.apache.cordova.core.inappbrowser" />
+	<access origin="*" />
 </widget>
 
