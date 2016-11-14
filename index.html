@@ -6,6 +6,7 @@
 				margin:0;
 				padding:0;
 				font-size:2vh;
+				display:none;
 			}
 			input {
 				width: 100vw;
@@ -31,13 +32,10 @@
 		<script src="js/jquery-3.1.1.min.js"></script>
 	</head>
 	<body>
-		<div id="configPage">
-			<h1>Okta demo app</h1>
-			<p>Please setup the url you want to open when the app starts.</p>
-			<input id="rootDir" type="text" value="" placeholder="rootDir" /><br>
-			<input id="btn_save" type="button" value="save">
-		</div>
-		<div id="introPage">
+		<h1>Okta demo app</h1>
+		<p>Please setup the url you want to open when the app starts.</p>
+		<input id="rootDir" type="text" value="" placeholder="rootDir" /><br>
+		<input id="btn_save" type="button" value="save">
 	</body>
 	<script>
 		$( document ).ready(function() {
@@ -49,6 +47,8 @@
 				else
 			{
 				window.open(rootDir, '_blank', 'location=no');
+//				$('body').hide();
+				$('body').delay(2000).show(0);
 			}
 		});
 
