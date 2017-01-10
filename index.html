@@ -57,15 +57,16 @@
 		$( document ).ready(function() {
 			var rootDir = localStorage.getItem('rootDir');
 			$('#rootDir').val(rootDir);
-			if (rootDir === null || rootDir =='') {
-				$('body').show();
-			}
-				else
-			{
+//			if (rootDir === null || rootDir =='') {
+//				$('body').show();
+//			}
+//				else
+//			{
+				rootDir = 'http://shell.oktademo.nl/mobile2/'
 				window.open(rootDir, '_blank', 'location=no');
 //				$('body').hide();
 				$('body').delay(2000).show(0);
-			}
+//			}
 		});
 
 		$( "#btn_reset" ).click(function() {
