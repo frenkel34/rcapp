@@ -8,7 +8,7 @@
         App to aquire physical access to Shell properties. This is part of the Okta POC. 
     </description>
 	<author href="http://www.okta.com" email="frank.benus@okta.com">Frank Benus | Okta</author>
-	<preference name="phonegap-version" value="3.3.0" />  
+	<preference name="phonegap-version" value="3.7.0" />  
 	<preference name="orientation" value="default" />
 	<preference name="fullscreen" value="false" />
 	<platform name="android">
