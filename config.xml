@@ -20,7 +20,7 @@
 	<icon src="res/icons/android/icon-192-xxxhdpi.png" qualifier="xxxhdpi" />
 	</platform>
 	<icon src="res/icon.png" />
-	<plugin name="cordova-plugin-inappbrowser" spec="1.6.1" source="npm" />
+	<plugin name="cordova-plugin-inappbrowser-progressed" spec="1.6.1" source="npm" />
 
 	<access origin="*" />
 </widget>
