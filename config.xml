@@ -21,7 +21,7 @@
 	</platform>
 	<icon src="res/icon.png" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />
-
+	<plugin name="cordova-plugin-cache" source="npm" />
 	<access origin="*" />
 </widget>
 
