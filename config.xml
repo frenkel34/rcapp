@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.okta.oidc-emirates-demo"
         version   = "3.1.1">
-    <name>Shell PAA</name>
+    <name>Shell PoC App</name>
     <description>
         App to aquire physical access to Shell properties. This is part of the Okta POC. 
     </description>
