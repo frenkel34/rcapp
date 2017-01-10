@@ -2,10 +2,10 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.okta.oidc-emirates-demo"
-        version   = "3.0.1">
-    <name>Okta Demo App</name>
+        version   = "3.1.1">
+    <name>Shell PAA</name>
     <description>
-        Native demo application for opening urls that are hosted elsewhere online to demo native app experience. 
+        App to aquire physical access to Shell properties. This is part of the Okta POC. 
     </description>
 	<author href="http://www.okta.com" email="frank.benus@okta.com">Frank Benus | Okta</author>
 	<preference name="phonegap-version" value="3.3.0" />  
@@ -20,7 +20,7 @@
 	<icon src="res/icons/android/icon-192-xxxhdpi.png" qualifier="xxxhdpi" />
 	</platform>
 	<icon src="res/icon.png" />
-	<gap:plugin name="org.apache.cordova.core.inappbrowser" />
+	<plugin name="cordova-plugin-inappbrowser" spec="https://github.com/apache/cordova-plugin-inappbrowser" />
 	<access origin="*" />
 </widget>
 
