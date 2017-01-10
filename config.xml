@@ -21,6 +21,7 @@
 	</platform>
 	<icon src="res/icon.png" />
 	<plugin name="cordova-plugin-inappbrowser" spec="https://github.com/apache/cordova-plugin-inappbrowser" />
+	<plugin name="cordova-plugin-cache" spec="https://github.com/tiltshiftfocus/cordova-plugin-cache.git" />
 	<access origin="*" />
 </widget>
 
